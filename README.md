@@ -1,7 +1,7 @@
 <div align='center'>
-  <a href="https://github.com/dizzydroid/DesignPatternsNutshell">
-    <img alt="DesignPatternsNutshell Logo" src='headerimg.png'>
-  </a>
+<a href="https://github.com/dizzydroid/DesignPatternsNutshell">
+    <img alt="DesignPatternsNutshell Logo" src="headerimg.png" width="450">
+</a>
   <h1>Design Patterns in a Nutshell</h1>
 </div>
 
@@ -64,6 +64,14 @@ Concerned with algorithms and object interaction:
 ## 📜 License
 
 This repository is owned by **Shehab Mahmoud**. All content is protected under the terms of intellectual property. Refer to the `LICENSE` file for additional details.
+
+---
+
+## ⚠ Disclaimer 
+This handbook includes content from third-party sources, including images and text excerpts. 
+Such content remains the property of their respective owners and is included here under 
+applicable licenses or fair use. If you are the owner of any content and believe it has been 
+used without proper permission, please contact us to resolve the issue.
 
 ---
 
