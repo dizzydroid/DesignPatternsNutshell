@@ -1,6 +1,6 @@
 <div align='center'>
 <a href="https://github.com/dizzydroid/DesignPatternsNutshell">
-    <img alt="DesignPatternsNutshell Logo" src="headerimg.png" width="450">
+    <img alt="DesignPatternsNutshell Logo" src="headerimg.png" width="1000">
 </a>
   <h1>Design Patterns in a Nutshell</h1>
 </div>
