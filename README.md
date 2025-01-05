@@ -61,9 +61,14 @@ Concerned with algorithms and object interaction:
 
 ---
 
+## 📚 Get the Handbook
+This repository is a companion to the [Design Patterns in a Nutshell](https://drive.google.com/file/d/19qE0GULc0QBZ7pHO0XIFj_GkTRuBpd5v/view) handbook. 
+
+---
+
 ## 📜 License
 
-This repository is owned by **Shehab Mahmoud**. All content is protected under the terms of intellectual property. Refer to the `LICENSE` file for additional details.
+This repository is owned by **Shehab Mahmoud**. All content is protected under the terms of intellectual property. Refer to the [`LICENSE`](./LICENSE) file for additional details.
 
 ---
 
