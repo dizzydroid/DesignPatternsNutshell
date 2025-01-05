@@ -32,7 +32,7 @@ Deal with the composition of classes and objects to form larger structures:
 
 ### **3. Behavioral Patterns** [(`/Behavioral Patterns`)](./Behavioral%20Patterns)
 Concerned with algorithms and object interaction:
-- [Template](./Behavioral%20Patterns/template)
+- [Template Method](./Behavioral%20Patterns/template-method)
 - [Observer](./Behavioral%20Patterns/observer)
 - [State](./Behavioral%20Patterns/state)
 - [Command](./Behavioral%20Patterns/command)
