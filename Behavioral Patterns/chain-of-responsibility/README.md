@@ -78,8 +78,7 @@ direction TB
 
 ```
 > [!NOTE]
-> If the UML above is not rendering correctly, you can view the diagram from the [`singleton_uml.png`](./singleton_uml.png) file.
-
+> If the UML above is not rendering correctly, you can view the diagram from the [`chain-of-responsibility_uml.png`](./chain-of-responsibility_uml.png) file.
 ---
 
 ## 📝 Key Takeaways
