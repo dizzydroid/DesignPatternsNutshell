@@ -52,10 +52,58 @@ To see the Builder Pattern in action, refer to the [`TestRobotBuilder.java`](./T
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Builder Pattern:
+```mermaid
+classDiagram
+    class Director {
+        +construct()
+    }
 
-![Builder UML](./builder_uml.png)
+    class IBuilder {
+        +buildPart1()
+        +buildPart2()
+        +buildPart3()
+    }
 
+    class BuilderA {
+        +buildPart1()
+        +buildPart2()
+        +buildPart3()
+    }
+
+    class BuilderB {
+        +buildPart1()
+        +buildPart2()
+        +buildPart3()
+    }
+
+    class BuilderC {
+        +buildPart1()
+        +buildPart2()
+        +buildPart3()
+    }
+
+    class ProductA {
+    }
+
+    class ProductB {
+    }
+
+    class ProductC {
+    }
+
+    Director o--> IBuilder
+    IBuilder <|-- BuilderA
+    IBuilder <|-- BuilderB
+    IBuilder <|-- BuilderC
+    BuilderA --> ProductA
+    BuilderB --> ProductB
+    BuilderC --> ProductC
+
+
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`builder_uml.png`](./builder_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

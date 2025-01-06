@@ -34,9 +34,38 @@ To see the Command Pattern in action, refer to the [`Main.java`](./Main.java) fi
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the State Pattern:
+```mermaid
+classDiagram
+direction LR
+    class Client {
+    }
 
-![Command UML](./command_uml.png)
+    class Invoker {
+    }
+
+    class Command {
+        +Execute()
+    }
+
+    class ConcreteCommand {
+        -state
+        +Execute()
+    }
+
+    class Receiver {
+        +Action()
+    }
+
+    Client --> Invoker
+    Invoker o--> Command
+    Command <|-- ConcreteCommand
+    ConcreteCommand --> Receiver : receiver
+    Client --> Receiver
+    Client --> ConcreteCommand
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`command_uml.png`](./command_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

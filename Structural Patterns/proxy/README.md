@@ -41,9 +41,34 @@ To see the Proxy Pattern in action, refer to the [`Main.java`](./Main.java) file
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Proxy Pattern:
+```mermaid
+classDiagram
+direction LR
+    class Client {
+    }
 
-![Proxy UML](./proxy_uml.png)
+    class Target {
+        +operation()
+    }
+
+    class Proxy {
+        +doStuff()
+        +operation()
+    }
+
+    class RealTarget {
+        +operation()
+    }
+
+    Client --> Target
+    Target <|-- Proxy
+    Target <|-- RealTarget
+    Proxy --> RealTarget : delegate request
+
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`proxy_uml.png`](./proxy_uml.png) file.
 
 ---
 

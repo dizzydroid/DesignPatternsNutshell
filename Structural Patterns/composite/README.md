@@ -41,9 +41,39 @@ To see the Composite Pattern in action, refer to the [`ToDoListExample.java`](./
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Composite Pattern:
+```mermaid
+classDiagram
+direction TB
+    class Client {
+    }
 
-![Composite UML](./composite_uml.png)
+    class Component {
+        +operation()
+        +add(Component)
+        +remove(Component)
+        +getChild(int)
+    }
+
+    class Leaf {
+        +operation()
+    }
+
+    class Composite {
+        +add(Component)
+        +remove(Component)
+        +getChild(int)
+        +operation()
+    }
+
+    Client --> Component
+    Component <|-- Leaf
+    Component <|-- Composite
+    Composite o--> Component
+
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`composite_uml.png`](./composite_uml.png) file.
 
 ---
 

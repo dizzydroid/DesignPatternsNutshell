@@ -40,10 +40,55 @@ To see the Facade Pattern in action, refer to the [`Main.java`](./Main.java) fil
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Facade Pattern:
+```mermaid
+classDiagram
+    class Client {
+    }
 
-![Facade UML](./facade_uml.png)
+    class Facade {
+        +method_a(type) type
+        +method_b(type) type
+        +method_c(type) type
+        +method_d(type) type
+        +method_e(type) type
+    }
 
+    class SubSystemA {
+        +field: type
+        +method_a(type) type
+    }
+
+    class SubSystemB {
+        +field: type
+        +method_b(type) type
+    }
+
+    class SubSystemC {
+        +field: type
+        +method_c(type) type
+    }
+
+    class SubSystemD {
+        +field: type
+        +method_d(type) type
+    }
+
+    class SubSystemE {
+        +field: type
+        +method_e(type) type
+    }
+
+    Client --> Facade
+    Facade --> SubSystemA
+    Facade --> SubSystemB
+    Facade --> SubSystemC
+    Facade --> SubSystemD
+    Facade --> SubSystemE
+
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`facade_uml.png`](./facade_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

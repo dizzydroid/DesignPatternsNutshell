@@ -50,10 +50,64 @@ To see the Abstract Factory Pattern in action, refer to the [`Game.java`](./Game
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Abstract Factory Pattern:
+```mermaid
+classDiagram
+direction LR
+    class AbstractFactory {
+        +createProduct1()
+        +createProduct2()
+    }
 
-![Abstract Factory UML](./abstract-factory_uml.png)
+    class Product1 {
+    }
 
+    class Product2 {
+    }
+
+    class ConcreteFactoryA {
+        +createProduct1()
+        +createProduct2()
+    }
+
+    class ConcreteFactoryB {
+        +createProduct1()
+        +createProduct2()
+    }
+
+    class FactoryAProduct1 {
+    }
+
+    class FactoryAProduct2 {
+    }
+
+    class FactoryBProduct1 {
+    }
+
+    class FactoryBProduct2 {
+    }
+    
+    AbstractFactory <|-- ConcreteFactoryA
+    AbstractFactory <|-- ConcreteFactoryB
+
+    AbstractFactory --> Product1 : "HAS-A"
+    AbstractFactory --> Product2 : "HAS-A"
+
+    ConcreteFactoryA --> FactoryAProduct1 : "Creates"
+    ConcreteFactoryA --> FactoryAProduct2 : "Creates"
+
+    ConcreteFactoryB --> FactoryBProduct1 : "Creates"
+    ConcreteFactoryB --> FactoryBProduct2 : "Creates"
+
+    Product1 <|-- FactoryAProduct1
+    Product1 <|-- FactoryBProduct1
+
+    Product2 <|-- FactoryAProduct2
+    Product2 <|-- FactoryBProduct2
+
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`abstract-factory_uml.png`](./abstract-factory_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

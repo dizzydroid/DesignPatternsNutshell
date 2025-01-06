@@ -51,11 +51,41 @@ To see the Factory Method Pattern in action, refer to the [`Main.java`](./Main.j
 ---
 
 ## 📊 UML Diagram
+``` mermaid
+classDiagram
+    class Factory {
+        +createProduct() Product
+    }
 
-Here’s the UML representation of the Factory Method Pattern:
+    class Product {
+    }
 
-![Factory Method UML](./factory-method_uml.png)
+    class ConcreteFactory1 {
+        +createProduct() Product
+    }
 
+    class ConcreteFactory2 {
+        +createProduct() Product
+    }
+
+    class ConcreteProduct1 {
+    }
+
+    class ConcreteProduct2 {
+    }
+
+    Product <|-- ConcreteProduct2
+    Factory <|-- ConcreteFactory1
+    Factory <|-- ConcreteFactory2
+    ConcreteFactory1 --> ConcreteProduct1 : CREATES
+    ConcreteFactory2 --> ConcreteProduct2 : CREATES
+    Product <|-- ConcreteProduct1
+    
+    Factory --> Product : HAS-A
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`factory-method_uml.png`](./factory-method_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

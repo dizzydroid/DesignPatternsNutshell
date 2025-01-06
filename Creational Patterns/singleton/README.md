@@ -53,10 +53,25 @@ To see the Singleton Pattern in action, refer to the [`Main.java`](./Main.java) 
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Singleton Pattern:
 
-![Singleton UML](./singleton_uml.png)
+```mermaid
+classDiagram
+direction LR
+    class Singleton {
+        - instance: Singleton
+        - Singleton()
+        + getInstance(): Singleton
+    }
 
+    class SingletonClient {
+        - instance: Singleton.getInstance()
+    }
+
+    SingletonClient --> Singleton : Use
+    Singleton --* Singleton
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`singleton_uml.png`](./singleton_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

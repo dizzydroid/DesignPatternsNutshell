@@ -40,9 +40,34 @@ To see the Template Method Pattern in action, refer to the [`Main.java`](./Main.
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Template Method Pattern:
+```mermaid
+classDiagram
+    class Client {
+    }
 
-![Template Method UML](./template-method_uml.png)
+    class AbstractClass {
+        +TemplateMethod()
+        +primitiveOperation1()
+        +primitiveOperation2()
+    }
+
+    class ConcreteClass1 {
+        +primitiveOperation1()
+        +primitiveOperation2()
+    }
+
+    class ConcreteClass2 {
+        +primitiveOperation1()
+        +primitiveOperation2()
+    }
+
+    Client --> AbstractClass
+    AbstractClass <|-- ConcreteClass1
+    AbstractClass <|-- ConcreteClass2
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`template-method_uml.png`](./template-method_uml.png) file.
 
 ---
 

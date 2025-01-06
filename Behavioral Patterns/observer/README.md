@@ -42,9 +42,37 @@ To see the Observer Pattern in action, refer to the [`WeatherStation.java`](./We
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Observer Pattern:
+```mermaid
+classDiagram
+    class Subject {
+        -observers : Observer
+        +Attach()
+        +Detach()
+        +Notify()
+    }
 
-![Observer UML](./observer_uml.png)
+    class Observer {
+        +Update()
+    }
+
+    class ConcreteSubject {
+        -state
+        +GetState()
+    }
+
+    class ConcreteObserver {
+        -subject : ConcreteSubject
+        +Update()
+    }
+
+    Subject <|-- ConcreteSubject
+    Subject o--> Observer
+    Observer <|-- ConcreteObserver
+    ConcreteSubject --> ConcreteObserver
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [observer_uml.png](./observer_uml.png) file.
 
 ---
 

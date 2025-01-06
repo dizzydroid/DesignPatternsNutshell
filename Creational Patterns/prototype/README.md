@@ -50,9 +50,36 @@ To see the Prototype Pattern in action, refer to the [`TestCloning.java`](./Test
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Prototype Pattern:
+```mermaid
+classDiagram
+direction LR 
+    class Client {
+        + operation()
+    }
 
-![Prototype UML](./prototype_uml.png)
+    class Prototype {
+        + clone()
+    }
+
+    class ConcretePrototype1 {
+        + clone()
+        + doStuff()
+    }
+
+    class ConcretePrototype2 {
+        + clone()
+        + doStuff()
+    }
+
+    Client --> Prototype
+    Prototype <|-- ConcretePrototype1
+    Prototype <|-- ConcretePrototype2
+
+
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`prototype_uml.png`](./prototype_uml.png) file.
 
 ---
 

@@ -56,9 +56,54 @@ To see the Visitor Pattern in action, refer to the [`Main.java`](./Main.java) fi
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Visitor Pattern:
+```mermaid
+classDiagram
+direction LR
+    class Client {
+    }
 
-![Visitor UML](./visitor_uml.png)
+    class ObjectStructure {
+    }
+
+    class Element {
+        +Accept(Visitor)
+    }
+
+    class ElementA {
+        +Accept(v: Visitor)
+    }
+
+    class ElementB {
+        +Accept(v: Visitor)
+    }
+
+    class Visitor {
+        +VisitElementA(ElementA)
+        +VisitElementB(ElementB)
+    }
+
+    class ConcreteVisitor1 {
+        +VisitElementA(ElementA)
+        +VisitElementB(ElementB)
+    }
+
+    class ConcreteVisitor2 {
+        +VisitElementA(ElementA)
+        +VisitElementB(ElementB)
+    }
+
+    Client --> ObjectStructure
+    Client --> Visitor
+    ObjectStructure --> Element
+    Element <|-- ElementA
+    Element <|-- ElementB
+    Element --> Visitor
+    Visitor <|-- ConcreteVisitor1
+    Visitor <|-- ConcreteVisitor2
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`visitor_uml.png`](./visitor_uml.png) file.
 
 ---
 

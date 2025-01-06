@@ -26,8 +26,39 @@ Key features:
 ---
 
 ## 📊 UML Diagram
+```mermaid
+classDiagram
+direction LR
+    class Mediator {
+        +mediate()
+    }
 
-![Mediator UML](./mediator_uml.png)
+    class ConcreteMediator {
+        +mediate()
+    }
+
+    class Colleague {
+        +operation()
+    }
+
+    class ConcreteColleagueA {
+        +operationA()
+    }
+
+    class ConcreteColleagueB {
+        +operationB()
+    }
+
+    Mediator <|-- ConcreteMediator
+    Colleague <|-- ConcreteColleagueA
+    Colleague <|-- ConcreteColleagueB
+    Colleague --> Mediator : mediator
+    ConcreteMediator --> ConcreteColleagueA
+    ConcreteMediator --> ConcreteColleagueB
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`mediator_uml.png`](./mediator_uml.png) file.
 
 ---
 

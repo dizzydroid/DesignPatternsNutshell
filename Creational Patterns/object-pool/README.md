@@ -51,10 +51,29 @@ To see the Object Pool Pattern in action, refer to the [`TestObjectPool.java`](.
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Object Pool Pattern:
+```mermaid
+classDiagram
+direction LR
+    class Client {
+    }
 
-![Object Pool UML](./object-pool_uml.png)
+    class ObjectPool {
+        +getInstance()
+        +acquireReusable()
+        +releaseReusable()
+    }
 
+    class ReusableObject {
+        +doStuff()
+    }
+
+    Client --> ObjectPool : "asks for ReusableObject"
+    ObjectPool o--> ReusableObject
+    Client --> ReusableObject : uses
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`object-pool_uml.png`](./object-pool_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

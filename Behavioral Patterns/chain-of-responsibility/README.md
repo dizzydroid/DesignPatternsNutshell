@@ -52,9 +52,33 @@ To see the Chain of Responsibility Pattern in action, refer to the [`Main.java`]
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Chain of Responsibility Pattern:
+```mermaid
+classDiagram
+direction TB
+    class Client {
+    }
 
-![Chain of Responsibility UML](./chain-of-responsibility_uml.png)
+    class Handler {
+        +handleRequest()
+    }
+
+    class ConcreteHandler1 {
+        +handleRequest()
+    }
+
+    class ConcreteHandler2 {
+        +handleRequest()
+    }
+
+    Handler <--o Handler : successor
+    Client --> Handler : " send command "
+    Handler <|-- ConcreteHandler1
+    Handler <|-- ConcreteHandler2
+
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`singleton_uml.png`](./singleton_uml.png) file.
 
 ---
 

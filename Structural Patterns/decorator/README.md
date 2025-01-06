@@ -42,9 +42,43 @@ To see the Decorator Pattern in action, refer to the [`CoffeeHouse.java`](./Coff
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Decorator Pattern:
+```mermaid
+classDiagram
+    class IObject {
+        +stuff()
+    }
 
-![Decorator UML](./decorator_uml.png)
+    class Object {
+        +stuff()
+    }
+
+    class Decorator {
+        - object : IObject
+        +stuff()
+    }
+
+    class ConcreteDecorator1 {
+        +stuff()
+    }
+
+    class ConcreteDecorator2 {
+        +stuff()
+    }
+
+    class ConcreteDecorator3 {
+        +stuff()
+    }
+
+    IObject <|-- Object
+    IObject <|-- Decorator
+    Decorator <|-- ConcreteDecorator1
+    Decorator <|-- ConcreteDecorator2
+    Decorator <|-- ConcreteDecorator3
+    Decorator o--> IObject
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`decorator_uml.png`](./decorator_uml.png) file.
 
 ---
 

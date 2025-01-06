@@ -42,10 +42,32 @@ To see the Adapter Pattern in action, refer to the [`Main.java`](./Main.java) fi
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Adapter Pattern:
+```mermaid
+classDiagram
+direction LR
+    class Client {
+        +request()
+    }
 
-![Adapter UML](./adapter_uml.png)
+    class Target {
+        +request()
+    }
 
+    class Adapter {
+        +request()
+    }
+
+    class Adaptee {
+        +specificRequest()
+    }
+
+    Client --> Target
+    Target <|-- Adapter
+    Adapter --> Adaptee : adaptee
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`adapter_uml.png`](./adapter_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

@@ -41,9 +41,45 @@ To see the Flyweight Pattern in action, refer to the [`Main.java`](./Main.java) 
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Flyweight Pattern:
+```mermaid
+classDiagram
+direction LR
+    class Client {
+    }
 
-![Flyweight UML](./flyweight_uml.png)
+    class Flyweight {
+        +method(extrinsicState)
+    }
+
+    class FlyweightFactory {
+        +getID(key)
+        +cache: Flyweight[]
+    }
+
+    class SharedFlyweight {
+        -intrinsicState1
+        -intrinsicState2
+        +method(extrinsicState)
+    }
+
+    class UnsharedFlyweight {
+        -intrinsicState1
+        -intrinsicState2
+        -extrinsicState1
+        -extrinsicState2
+        +method(extrinsicState)
+    }
+
+    Client --> Flyweight : Flyweight
+    Flyweight <|-- SharedFlyweight
+    Flyweight <|-- UnsharedFlyweight
+    Client --> FlyweightFactory
+    FlyweightFactory --> SharedFlyweight : << create & share >>
+
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`flyweight_uml.png`](./flyweight_uml.png) file.
 
 ---
 

@@ -54,9 +54,36 @@ To see the Strategy Pattern in action, refer to the [`Main.java`](./Main.java) f
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Strategy Pattern:
+```mermaid
+classDiagram
+direction LR
+    class Client {
+    }
 
-![Strategy UML](./strategy_uml.png)
+    class Context {
+        -strategy : Interface
+    }
+
+    class Interface {
+        +algorithm()
+    }
+
+    class ImplementationOne {
+        +algorithm()
+    }
+
+    class ImplementationTwo {
+        +algorithm()
+    }
+
+    Client --> Context
+    Context o--> Interface
+    Interface <|-- ImplementationOne
+    Interface <|-- ImplementationTwo
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [strategy_uml.png](./strategy_uml.png) file.
 
 ---
 

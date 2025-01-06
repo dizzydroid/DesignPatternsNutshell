@@ -42,10 +42,33 @@ To see the Bridge Pattern in action, refer to the [`Main.java`](./Main.java) fil
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Bridge Pattern:
+```mermaid
+classDiagram
+direction LR
+    class Abstraction {
+        - impl : Implementor
+        +function()
+    }
 
-![Bridge UML](./bridge_uml.png)
+    class Implementor {
+        +implementation()
+    }
 
+    class ConcreteAbstraction {
+        +refinedFunction()
+    }
+
+    class ConcreteImplementor {
+        +implementation()
+    }
+
+    Abstraction --> Implementor
+    Abstraction <|-- ConcreteAbstraction
+    Implementor <|-- ConcreteImplementor
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`bridge_uml.png`](./bridge_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

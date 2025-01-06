@@ -41,10 +41,32 @@ To see the State Pattern in action, refer to the [`TestDrive.java`](./TestDrive.
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the State Pattern:
+```mermaid
+classDiagram
+direction LR
+    class Context {
+        +request()
+    }
 
-![State UML](./state_uml.png)
+    class State {
+        +handle()
+    }
 
+    class ConcreteStateA {
+        +handle()
+    }
+
+    class ConcreteStateB {
+        +handle()
+    }
+
+    Context o--> State
+    State <|-- ConcreteStateA
+    State <|-- ConcreteStateB
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [state_uml.png](./state_uml.png) file.
 ---
 
 ## 📝 Key Takeaways

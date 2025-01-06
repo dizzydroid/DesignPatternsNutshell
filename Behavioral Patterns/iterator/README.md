@@ -51,9 +51,38 @@ To see the Iterator Pattern in action, refer to the [`Main.java`](./Main.java) f
 
 ## 📊 UML Diagram
 
-Here’s the UML representation of the Iterator Pattern:
+```mermaid
+classDiagram
+    class Aggregate {
+        +CreateIterator()
+    }
 
-![Iterator UML](./iterator_uml.png)
+    class ConcreteAggregate {
+        +CreateIterator()
+    }
+
+    class Iterator {
+        +First()
+        +Next()
+        +hasNext()
+    }
+
+    class ConcreteIterator {
+        +First()
+        +Next()
+        +hasNext()
+    }
+
+    Client --> Iterator
+    Client --> Aggregate
+    Aggregate <|-- ConcreteAggregate
+    Iterator <|-- ConcreteIterator
+    ConcreteAggregate --> ConcreteIterator : constructs
+    ConcreteIterator --> ConcreteAggregate : has (traverses)
+
+```
+> [!NOTE]
+> If the UML above is not rendering correctly, you can view the diagram from the [`iterator_uml.png`](./iterator_uml.png) file.
 
 ---
 
