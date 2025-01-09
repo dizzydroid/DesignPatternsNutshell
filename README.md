@@ -20,7 +20,7 @@ The handbook generally assumes a basic understanding of object-oriented programm
 
 If you're new to Object-Oriented Programming, consider learning the basics before diving into design patterns. Here are some great resources to that I personally recommend:
 - [**Head First Java** by Kathy Sierra, Bert Bates, Trisha Gee](https://www.oreilly.com/library/view/head-first-java/9781492091646/)
-- [**CodeBro's full Java Course**](https://www.youtube.com/watch?v=xk4_1vDrzzo)
+- [**Bro Code's full Java Course**](https://www.youtube.com/watch?v=xk4_1vDrzzo)
 - [**learnjavaonline.org**](https://www.learnjavaonline.org/)
 
 The resources above (ordered by personal preference) will help you get started with Java and Object-Oriented Programming.
