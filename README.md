@@ -63,7 +63,6 @@ Concerned with algorithms and object interaction:
 - [**Strategy**](./Behavioral%20Patterns/strategy)
 - [**Chain of Responsibility**](./Behavioral%20Patterns/chain-of-responsibility)
 - [**Iterator**](./Behavioral%20Patterns/iterator)
-- [**Memento**](./Behavioral%20Patterns/memento)
 
 ---
 
