@@ -18,7 +18,7 @@ Think of design patterns as a set of tools in your toolbox. Just like a carpente
 ## 📋 Pre-requisites
 The handbook generally assumes a basic understanding of object-oriented programming concepts. The examples in this repo are particularly written in Java, but if you're familiar with other languages, you should be able to follow along.
 
-If you're new to Object-Oriented Programming, consider learning the basics before diving into design patterns. Here are some great resources to that I personally recommend:
+If you're new to Object-Oriented Programming, consider learning the basics before diving into design patterns. Here are some great resources that I personally recommend:
 - [**Head First Java** by Kathy Sierra, Bert Bates, Trisha Gee](https://www.oreilly.com/library/view/head-first-java/9781492091646/)
 - [**Bro Code's full Java Course**](https://www.youtube.com/watch?v=xk4_1vDrzzo)
 - [**learnjavaonline.org**](https://www.learnjavaonline.org/)
